@@ -1,8 +1,11 @@
+
+
 import static spark.Spark.*;
 
 public class Main {
 
     public static void main(String[] args) {
+
 
         //This is required to allow GET and POST requests with the header 'content-type'
         options("/*",
@@ -22,7 +25,7 @@ public class Main {
 
         //TODO: Return JSON containing the candies for which the stock is less than 25% of it's capacity
         get("/low-stock", (request, response) -> {
-            return null;
+            return "hello";
         });
 
         //TODO: Return JSON containing the total cost of restocking candy

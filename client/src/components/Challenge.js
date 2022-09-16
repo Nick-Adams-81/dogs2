@@ -24,8 +24,8 @@ export default function Challenge() {
       {/* 
       TODO: Add event handlers to these buttons that use the Java API to perform their relative actions.
       */}
-      <button>Get Low-Stock Items</button>
-      <button>Determine Re-Order Cost</button>
+      <button onClick={() => alert("test")}>Get Low-Stock Items</button>
+      <button onClick={() => alert("more testing")}>Determine Re-Order Cost</button>
     </>
   );
 }
