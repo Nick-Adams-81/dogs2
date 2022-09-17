@@ -1,0 +1,105 @@
+[
+    {
+        "id": 1,
+        "Name": "licorice",
+        "Stock": 22,
+        "Capacity": 25
+
+    },
+    {
+        "id": 2,
+        "Name": "good & plenty",
+        "Stock": 4,
+        "Capacity": 20
+    },
+    {
+        "id": 3,
+        "Name": "smarties",
+        "Stock": 15,
+        "Capacity": 25
+    },
+    {
+        "id": 4,
+        "Name": "tootsie rolls",
+        "Stock": 30,
+        "Capacity": 50
+    },
+    {
+        "id": 5,
+        "Name": "necco wafers",
+        "Stock": 14,
+        "Capacity": 15
+    },
+    {
+        "id": 6,
+        "Name": "wax cola bottles",
+        "Stock": 8,
+        "Capacity": 10
+    },
+    {
+        "id": 7,
+        "Name": "circus peanuts",
+        "Stock": 10,
+        "Capacity": 10
+    },
+    {
+        "id": 8,
+        "Name": "candy corn",
+        "Stock": 30,
+        "Capacity": 40
+    },
+    {
+        "id": 9,
+        "Name": "twix",
+        "Stock": 17,
+        "Capacity": 70
+    },
+    {
+        "id": 10,
+        "Name": "snickers",
+        "Stock": 43,
+        "Capacity": 65
+    },
+    {
+        "id": 11,
+        "Name": "m & ms",
+        "Stock": 32,
+        "Capacity": 55
+    },
+    {
+        "id": 12,
+        "Name": "skittles",
+        "Stock": 25,
+        "Capacity": 45
+    },
+    {
+        "id": 13,
+        "Name": "starburst",
+        "Stock": 8,
+        "Capacity": 45
+    },
+    {
+        "id": 14,
+        "Name": "butterfinger",
+        "Stock": 10,
+        "Capacity": 60
+    },
+    {
+        "id": 15,
+        "Name": "peach rings",
+        "Stock": 20,
+        "Capacity": 30
+    },
+    {
+        "id": 16,
+        "Name": "gummy bears",
+        "Stock": 15,
+        "Capacity": 35
+    },
+    {
+        "id": 17,
+        "Name": "sour patch kids",
+        "Stock": 14,
+        "Capacity": 60
+    }
+]

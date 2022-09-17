@@ -1,4 +1,8 @@
-export default function Challenge() {
+
+import ItemRow from "../components/ItemRow"
+
+ const Challenge = () => {
+
   return (
     <>
       <table>
@@ -11,12 +15,14 @@ export default function Challenge() {
             <td>Order Amount</td>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="tbody">
           {/* 
+          
           TODO: Create an <ItemRow /> component that's rendered for every inventory item. The component
           will need an input element in the Order Amount column that will take in the order amount and 
           update the application state appropriately.
           */}
+        
         </tbody>
       </table>
       {/* TODO: Display total cost returned from the server */}
@@ -24,8 +30,14 @@ export default function Challenge() {
       {/* 
       TODO: Add event handlers to these buttons that use the Java API to perform their relative actions.
       */}
-      <button onClick={() => alert("test")}>Get Low-Stock Items</button>
+        <ItemRow />
+      <button onClick={() => {
+        const tbody = document.getElementById("tbody")
+        tbody.append("testing the append")
+      }}>Get Low-Stock Items</button>
       <button onClick={() => alert("more testing")}>Determine Re-Order Cost</button>
     </>
   );
 }
+
+export default Challenge
