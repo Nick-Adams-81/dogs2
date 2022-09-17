@@ -33,7 +33,7 @@ import ItemRow from "../components/ItemRow"
         <ItemRow />
       <button onClick={() => {
         const tbody = document.getElementById("tbody")
-        tbody.append("testing the append")
+        tbody.append()
       }}>Get Low-Stock Items</button>
       <button onClick={() => alert("more testing")}>Determine Re-Order Cost</button>
     </>

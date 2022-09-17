@@ -29,9 +29,6 @@ public class Main {
             return "hello";
         });
 
-        get("/hello/:name", (request, response) -> {
-            return "hello, " + request.params(":name");
-        });
 
         //TODO: Return JSON containing the total cost of restocking candy
         post("/restock-cost", (request, response) -> {
