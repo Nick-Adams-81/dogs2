@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "Name": "snickers",
+        "Cost": 0.47
+    },
+    {
+        "id": 2,
+        "Name": "m & ms",
+        "Cost": 0.84
+    },
+    {
+        "id": 3,
+        "Name": "skittles",
+        "Cost": 0.15
+    },
+    {
+        "id": 4,
+        "Name": "butterfinger",
+        "Cost": 0.97
+    },
+    {
+        "id": 5,
+        "Name": "peach rings",
+        "Cost": 0.39
+    },
+    {
+        "id": 6,
+        "Name": "gummy bears",
+        "Cost": 0.91
+    },
+    {
+        "id": 7,
+        "Name": "sour patch kids",
+        "Cost": 0.85
+    }
+]

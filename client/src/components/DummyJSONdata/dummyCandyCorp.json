@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "Name": "licorice",
+        "Cost": 0.81
+    },
+    {
+        "id": 2,
+        "Name": "good & plenty",
+        "Cost": 0.46
+    },
+    {
+        "id": 3,
+        "Name": "smarties",
+        "Cost": 0.89
+    },
+    {
+        "id": 4,
+        "Name": "tootsie rolls",
+        "Cost": 0.45
+    }
+]

@@ -16,7 +16,7 @@ import ItemRow from "./ItemRow"
             <td>Order Amount</td>
           </tr>
         </thead>
-        <tbody id="tbody">
+        <tbody>
           {/* 
           TODO: Create an <ItemRow /> component that's rendered for every inventory item. The component
           will need an input element in the Order Amount column that will take in the order amount and 

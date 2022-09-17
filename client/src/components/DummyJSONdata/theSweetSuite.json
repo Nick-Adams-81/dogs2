@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "Name": "good & plenty",
+        "Cost": 0.18
+    },
+    {
+        "id": 2,
+        "Name": "smaties",
+        "Cost": 0.54
+    },
+    {
+        "id": 3,
+        "Name": "tootsie rolls",
+        "Cost": 0.67
+    },
+    {
+        "id": 4,
+        "Name": "necco wafers",
+        "Cost": 0.25
+    },
+    {
+        "id": 5,
+        "Name": "wax cola bottles",
+        "Cost": 0.35
+    },
+    {
+        "id": 6,
+        "Name": "circus peanuts",
+        "Cost": 0.23
+    },
+    {
+        "id": 7,
+        "Name": "twix",
+        "Cost": 0.54
+    },
+    {
+        "id": 8,
+        "Name": "snickers",
+        "Cost": 0.25
+    },
+    {
+        "id": 9,
+        "Name": "m & ms",
+        "Cost": 0.52
+    },
+    {
+        "id": 10,
+        "Name": "skittles",
+        "Cost": 0.07
+    },
+    {
+        "id": 11,
+        "Name": "starburst",
+        "Cost": 0.77
+    },
+    {
+        "id": 12,
+        "Name": "butterfinger",
+        "Cost": 0.93
+    },
+    {
+        "id": 13,
+        "Name": "peach rings",
+        "Cost": 0.11
+    },
+    {
+        "id": 14,
+        "Name": "gummy bears",
+        "Cost": 0.42
+    }
+]
