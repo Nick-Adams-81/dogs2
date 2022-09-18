@@ -1,4 +1,4 @@
-import Inventory from "./dummyInventory.json"
+import Inventory from "./DummyJSONdata/dummyInventory.json"
 
 const itemRow = () => {
 

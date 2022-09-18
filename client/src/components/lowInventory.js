@@ -1,30 +1,31 @@
 
-// import { useEffect, useState } from "react"
-import Inventory from "./dummyInventory.json"
+ import React, { useEffect, useState } from "react"
+import Inventory from "./DummyJSONdata/dummyInventory.json"
 
 
-const itemRow = () => {
+const ItemRow = () => {
 
     // TODO: get real data from server and set data to inventory method //
-    // const [inventory, serInventory] = useState([])
+    const [inventory, setInventory] = useState([])
 
 
    /* TODO: make sure fetch is getting data from server and setting the incoming data
    to inventory method in useState hook
    */
-    // useEffect(() => {
-    //     fetch("http://localhost:4567/low-stock")
-    //         .then(res => res.json)
-    //         .then(data => setInventory(data))
-    //         .catch(err => console.group(err))
-    // })
+    useEffect(() => {
+        fetch("http://localhost:4567/low-stock")
+            .then(res => res.text())
+            .then(data => setInventory(data))
+            .catch(err => console.log(err))
+    }, [])
 
 
+    console.log(inventory)
     // TODO: change Inventory filter to inventory var in use state hook
     const filteredArray = Inventory.filter(item => {
         return (item.Capacity / item.Stock) >= 4
     })
-    console.log(filteredArray)
+    //console.log(filteredArray)
 
     // TODO : figure out why only one element in array is eing toggled 
     const toggleVisibility = () => {
@@ -56,4 +57,4 @@ const itemRow = () => {
     )
 }
 
-export default itemRow
+export default ItemRow

@@ -22,7 +22,7 @@ import ItemRow from "./ItemRow"
           will need an input element in the Order Amount column that will take in the order amount and 
           update the application state appropriately.
           */}
-          <ItemRow />
+          <LowInventory />
         
         </tbody>
       </table>
