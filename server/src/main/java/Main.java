@@ -1,23 +1,20 @@
 
 
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.util.Iterator;
-
 import static spark.Spark.*;
 
 public class Main {
 
 
-
     public static void main(String[] args) {
 
         GetInventoryData getInventoryData = new GetInventoryData();
+        GetDistributorsData getDistributorsData = new GetDistributorsData();
+
+        String distributorsData = getDistributorsData.getDistributorsData();
         String inventoryData = getInventoryData.getData();
-        System.out.println(inventoryData);
+
+        System.out.println(distributorsData);
+//        System.out.println(inventoryData);
 
         //This is required to allow GET and POST requests with the header 'content-type'
         options("/*",
@@ -37,7 +34,9 @@ public class Main {
 
         //TODO: Return JSON containing the candies for which the stock is less than 25% of it's capacity
         get("/low-stock", (request, response) -> {
-           return inventoryData;
+            response.status(200);
+            response.type("application/json");
+            return distributorsData;
         });
 
 
