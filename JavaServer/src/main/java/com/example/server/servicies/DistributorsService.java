@@ -5,7 +5,7 @@ import com.example.server.models.Distributors;
 import java.util.List;
 import java.util.Optional;
 
-public interface DistributorService {
+public interface DistributorsService {
 
     Distributors saveDistributor(Distributors distributors);
 

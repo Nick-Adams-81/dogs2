@@ -3,7 +3,6 @@ package com.example.server.controllers;
 import com.example.server.models.Inventory;
 import com.example.server.servicies.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
