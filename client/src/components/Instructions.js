@@ -33,7 +33,7 @@ export default function Instructions() {
       The backend exposes two endpoints at <code>
         http://localhost:4567
       </code>{" "}
-      using the <a href="https://sparkjava.com/">Java Spark</a> library:{" "}
+      
       <code>/low-stock</code> and <code>/restock-cost</code>. The{" "}
       <code>/low-stock</code> endpoint should return only the items that are at
       less than 25% capacity. The <code>/restock-cost</code> endpoint should
