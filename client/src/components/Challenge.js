@@ -1,6 +1,9 @@
 
-import LowInventory from "./lowInventory"
-import ItemRow from "./ItemRow"
+import LowInventory from "./Pages/lowInventory"
+import ItemRow from "./Pages/ItemRow"
+import CandyCorp from "./Pages/CandyCorp"
+import TheSweetSuite from "./Pages/TheSweetSuite"
+import DentistsHateUs from "./Pages/DentistsHateUs"
 
  const Challenge = () => {
 
@@ -22,7 +25,7 @@ import ItemRow from "./ItemRow"
           will need an input element in the Order Amount column that will take in the order amount and 
           update the application state appropriately.
           */}
-          <LowInventory />
+          <DentistsHateUs />
         
         </tbody>
       </table>
@@ -32,10 +35,7 @@ import ItemRow from "./ItemRow"
       TODO: Add event handlers to these buttons that use the Java API to perform their relative actions.
       */}
         {/* <LowInventory /> */}
-      <button onClick={() => {
-        const tbody = document.getElementById("tbody")
-        tbody.append()
-      }}>Get Low-Stock Items</button>
+      <button>Get Low-Stock Items</button>
       <button onClick={() => alert("more testing")}>Determine Re-Order Cost</button>
     </>
   );
