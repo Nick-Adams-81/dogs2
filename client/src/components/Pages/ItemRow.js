@@ -8,7 +8,6 @@ const [inventory, setInventory] = useState([])
 
 useEffect(() => {
     getItems("http://localhost:4567/getItems", setInventory)
-
 }, [])
     // const add = (...args) => {
     //     return args.reduce((sum, ammount) => sum + ammount, 0)
@@ -17,6 +16,7 @@ useEffect(() => {
 
     return (
         <>
+        <h1>Randy's Candies</h1>
             {inventory.map((item) => {
                 return (
                     <div id="card" key={item.id} style={{ display: "flex" }}>
