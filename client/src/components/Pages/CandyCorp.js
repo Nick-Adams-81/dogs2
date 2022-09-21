@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import get from "../CustomHooks/GET"
 import post from "../CustomHooks/POST"
+import Card from "../Card"
 
 
 const CandyCorp = () => {
@@ -24,13 +25,16 @@ const CandyCorp = () => {
 
     return (
         <>
-    
+
+            <Card />
             <h1>Candy Corp</h1>
             {candy.map(item => {
                 return (
+                   
                     <div key={item.id}>
-                        <p>Name: {item.productName}</p>
-                        <p>Cost: {item.cost}</p>
+                        <Card name={item.productName} cost={item.cost} />
+                        {/* <p>Name: {item.productName}</p>
+                        <p>Cost: {item.cost}</p> */}
                         <label htmlFor="input">quantity</label>
                         <input
                             id="input"
@@ -48,7 +52,7 @@ const CandyCorp = () => {
                 )
 
             })}
-        
+
         </>
     )
 }

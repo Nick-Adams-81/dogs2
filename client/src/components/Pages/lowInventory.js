@@ -18,6 +18,7 @@ const ItemRow = () => {
     
     return (
         <div>
+            <h1>Low Stock Items</h1>
             {filteredArray.map(item => {
                 return (
                     <div>

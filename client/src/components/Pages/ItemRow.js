@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect} from "react"
 import getItems from "../CustomHooks/GET"
-import Wrapper from "../Wrapper"
+
 
 const ItemRow = () => {
 
