@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react"
 import getItem from "../CustomHooks/GET"
+import Card from "../InventoryCard"
 
 
 const ItemRow = () => {
@@ -21,12 +22,9 @@ const ItemRow = () => {
             <h1>Low Stock Items</h1>
             {filteredArray.map(item => {
                 return (
-                    <div>
-                        <div id="div" style={{ display: "flex", margin: 3, display: "flex" }} key={item.id}>
-                            <p>Name: {item.productName}</p>
-                            <p>Stock: {item.stock}</p>
-                            <p>Capacity: {item.capacity}</p>
-                        </div>
+                    
+                    <div key={item.id}>
+                        <Card name={item.productName} stock={item.stock}  capacity={item.capacity}/>
                     </div>
                 )
             })}

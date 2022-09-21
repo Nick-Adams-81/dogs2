@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect} from "react"
 import getItems from "../CustomHooks/GET"
+import Card from "../InventoryCard"
 
 
 const ItemRow = () => {
@@ -22,9 +23,10 @@ useEffect(() => {
             {inventory.map((item) => {
                 return (
                     <div id="card" key={item.id} style={{ display: "flex" }}>
-                        <p>Name: {item.productName} </p>
+                        <Card name={item.productName} stock={item.stock}  capacity={item.capacity}/>
+                        {/* <p>Name: {item.productName} </p>
                         <p>Stock: {item.stock} </p>
-                        <p>Capacity: {item.capacity} </p>
+                        <p>Capacity: {item.capacity} </p> */}
                     </div>
                 )
 
