@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import get from "../CustomHooks/GET"
 import post from "../CustomHooks/POST"
 
+
 const CandyCorp = () => {
 
     const [candy, setCandy] = useState([])
@@ -23,6 +24,7 @@ const CandyCorp = () => {
 
     return (
         <>
+    
             <h1>Candy Corp</h1>
             {candy.map(item => {
                 return (
@@ -46,7 +48,7 @@ const CandyCorp = () => {
                 )
 
             })}
-
+        
         </>
     )
 }

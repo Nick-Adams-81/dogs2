@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect} from "react"
 import getItems from "../CustomHooks/GET"
+import Wrapper from "../Wrapper"
 
 const ItemRow = () => {
 
@@ -16,6 +17,7 @@ useEffect(() => {
 
     return (
         <>
+        
         <h1>Randy's Candies</h1>
             {inventory.map((item) => {
                 return (
@@ -27,6 +29,7 @@ useEffect(() => {
                 )
 
             })}
+            
         </>
     )
 }

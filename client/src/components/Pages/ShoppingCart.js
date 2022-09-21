@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from "react"
 import get from "../CustomHooks/GET"
+// import deleteItem from "../CustomHooks/delete"
 
 const ShoppingCart = () => {
     const [data, setData] = useState([])
@@ -9,6 +10,7 @@ const ShoppingCart = () => {
     }, [])
     return(
         <>
+        <h1>Your Cart</h1>
         {data.map(item => {
             return(
                 <div key={item.id}>

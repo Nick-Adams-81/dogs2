@@ -1,4 +1,3 @@
-
 import LowInventory from "./Pages/lowInventory"
 import ItemRow from "./Pages/ItemRow"
 import CandyCorp from "./Pages/CandyCorp"
@@ -7,7 +6,7 @@ import DentistsHateUs from "./Pages/DentistsHateUs"
 import { Routes, Route, useNavigate } from "react-router-dom"
 import ShoppingCart from "./Pages/ShoppingCart"
 
-const Challenge = () => {
+const Wrapper = (props) => {
 
   const navigate = useNavigate();
 
@@ -25,6 +24,7 @@ const Challenge = () => {
         </thead>
         <tbody>
           {/* place props here */}
+          {props.children}
         </tbody>
       </table>
       
@@ -49,4 +49,4 @@ const Challenge = () => {
   );
 }
 
-export default Challenge
+export default Wrapper
