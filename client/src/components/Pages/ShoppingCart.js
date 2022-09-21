@@ -3,13 +3,22 @@ import get from "../CustomHooks/GET"
 import deleteItem from "../CustomHooks/DELETE"
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import InputGroup from 'react-bootstrap/InputGroup'
-import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const ShoppingCart = () => {
+
     const [data, setData] = useState([])
+
+    let value = []
+    for (let i = 0; i < data.length; i++) {
+        value.push(data[i].itemTotalPrice)
+    }
+
+    console.log(value)
+
+    let grandTotal = value.reduce((item, total) => item + total, 0).toFixed(2)
+    console.log(grandTotal)
 
     useEffect(() => {
         get("http://localhost:4567/getAllShoppingCartItems", setData)
@@ -17,13 +26,14 @@ const ShoppingCart = () => {
     return (
         <>
             <h1>Your Cart</h1>
+            <h2>Grand Total: {grandTotal}</h2>
             <Button style={{ marginLeft: 45 }}
                 onClick={() => {
                     alert("Order complete!")
                     deleteItem("http://localhost:4567/deleteAllCartItems")
                     window.location.reload()
                 }}>Complete Order</Button>
-                
+
             {data.map(item => {
                 return (
                     <Row style={{ display: 'flex' }}>
@@ -52,7 +62,7 @@ const ShoppingCart = () => {
                     </Row>
                 )
             })}
-            
+
         </>
 
     )
