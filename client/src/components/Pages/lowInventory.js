@@ -19,7 +19,7 @@ const ItemRow = () => {
     
     return (
         <div>
-            <h1>Low Stock Items</h1>
+            <h1 style={{ marginLeft: 140 }}>Low Stock Items</h1>
             {filteredArray.map(item => {
                 return (
                     

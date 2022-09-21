@@ -5,6 +5,7 @@ const ItemCard = (props) => {
         <Card style={{
             width: '12rem',
             border: '1px solid black',
+            marginLeft: 160,
             margin: 3,
             display: 'inline-block',
             backgroundColor: '#FFF0FC',

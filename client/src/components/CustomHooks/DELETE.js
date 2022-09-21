@@ -1,7 +1,7 @@
 
 
-const deleteItem = (url, id) => {
-    fetch(`${url}/${id}`, {
+const deleteItem = (url) => {
+    fetch(`${url}`, {
         method: "DELETE"
     })
     .then(() => console.log("Item deleted!"))

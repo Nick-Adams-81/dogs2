@@ -4,7 +4,7 @@
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.sidebar {
+/* .sidebar {
   position: fixed;
   left: 0;
   top: 0;
@@ -15,10 +15,10 @@
   border-right: 2px solid #eee;
   background-color: #f3f4f6;
   line-height: 2rem;
-}
+} */
 
 .challenge-container {
-  margin-left: 50%;
+  margin-left: 25%;
 }
 
 ::-webkit-scrollbar {
@@ -48,9 +48,9 @@ code {
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-table {
+/* table {
   border-collapse: collapse;
-}
+} */
 
 p {
   line-height: 2rem;

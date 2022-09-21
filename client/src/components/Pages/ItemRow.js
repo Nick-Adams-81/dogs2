@@ -19,14 +19,11 @@ useEffect(() => {
     return (
         <>
         
-        <h1>Randy's Candies</h1>
+        <h1 style={{ marginLeft: 140 }}>Randy's Candies</h1>
             {inventory.map((item) => {
                 return (
-                    <div id="card" key={item.id} style={{ display: "flex" }}>
+                    <div key={item.id}>
                         <Card name={item.productName} stock={item.stock}  capacity={item.capacity}/>
-                        {/* <p>Name: {item.productName} </p>
-                        <p>Stock: {item.stock} </p>
-                        <p>Capacity: {item.capacity} </p> */}
                     </div>
                 )
 

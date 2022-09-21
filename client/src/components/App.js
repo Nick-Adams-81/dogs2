@@ -6,7 +6,7 @@ export default function App() {
   return (
     <>
 
-      <Instructions />
+      {/* <Instructions /> */}
       <div className="challenge-container">
         <Challenge />
       </div>

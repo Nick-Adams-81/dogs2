@@ -24,7 +24,7 @@ const Challenge = () => {
           </tr>
         </thead>
         <tbody>
-          {/* place props here */}
+          
         </tbody>
       </table>
       
