@@ -1,6 +1,7 @@
-# Randy's Candies 
+# Randy's Candys 
 Welcome to Randy's Candys! We have a wide variety of all sorts of sweet things for every kind of sweet tooth,
 here at Randy's Candies we keep dentists on business, so if you have a sweet tooth we have the candies for you!
+
 
 ## System Requirements
 - Latest LTS version of Node
