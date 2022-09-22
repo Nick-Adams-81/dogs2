@@ -65,9 +65,10 @@ const DentistsHateUs = () => {
                                             </InputGroup>
                                         </div>
                                         <Button style={{ marginLeft: 45 }}
-                                            onClick={() => {
+                                            onClick={(e) => {
+                                                e.preventDefault()
                                                 handleClick(item)
-                                                setItemName(item.productName)
+                                                setItemName(item.itemName)
                                                 setItemTotalPrice(calculateTotalCost(item.cost, totalQuantity))
                                             }}>Save to cart</Button>
                                     </Card>

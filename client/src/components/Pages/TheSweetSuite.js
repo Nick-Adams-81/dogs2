@@ -5,7 +5,6 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup'
 import Form from 'react-bootstrap/Form';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -27,6 +26,7 @@ const TheSweetSuite = () => {
         post("http://localhost:4567/saveShoppingCartItem", cartItems)
     }
 
+    console.log(sweet)
     const calculateTotalCost = (itemCost, itemAmmount) => (itemCost * itemAmmount).toFixed(2)
 
     return (
@@ -47,7 +47,7 @@ const TheSweetSuite = () => {
                                 }}>
                                     <Card body>
                                         <div style={{ margin: 5 }}>
-                                            <Card.Title>Name: {item.productName}</Card.Title>
+                                            <Card.Title>Name: {item.itemName}</Card.Title>
                                             <Card.Text>Cost: {item.cost}</Card.Text>
                                             <InputGroup className="mb-3">
                                                 <InputGroup.Text id="basic-addon1"></InputGroup.Text>
@@ -67,7 +67,7 @@ const TheSweetSuite = () => {
                                         <Button style={{ marginLeft: 45 }}
                                             onClick={() => {
                                                 handleClick(item)
-                                                setItemName(item.productName)
+                                                setItemName(item.itemName)
                                                 setItemTotalPrice(calculateTotalCost(item.cost, totalQuantity))
                                             }}>Save to cart</Button>
                                     </Card>

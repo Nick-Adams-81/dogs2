@@ -26,10 +26,10 @@ const ShoppingCart = () => {
     return (
         <>
             <h1>Your Cart</h1>
-            <h2>Grand Total: {grandTotal}</h2>
+            <h2>Grand Total: ${grandTotal}</h2>
             <Button style={{ marginLeft: 45 }}
                 onClick={() => {
-                    alert("Order complete!")
+                    alert(`Order Complete! Your total is: $${grandTotal}`)
                     deleteItem("http://localhost:4567/deleteAllCartItems")
                     window.location.reload()
                 }}>Complete Order</Button>

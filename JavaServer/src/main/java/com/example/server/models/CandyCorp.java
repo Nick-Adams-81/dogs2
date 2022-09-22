@@ -11,7 +11,7 @@ public class CandyCorp {
     private long id;
 
     @Column
-    private String productName;
+    private String itemName;
 
     @Column
     private double cost;
@@ -24,12 +24,12 @@ public class CandyCorp {
         this.id = id;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getItemName() {
+        return itemName;
     }
 
     public void setProductName(String productName) {
-        this.productName = productName;
+        this.itemName = productName;
     }
 
     public double getCost() {
