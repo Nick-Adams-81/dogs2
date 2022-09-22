@@ -5,6 +5,8 @@
 
 ## Getting Started
 
+
+### Backend
 * If you don't have Node installed, you can follow the instructions at: `https://nodejs.org/en/`
 * If you don't have MySQL Server installed you can follow the instructions for installation at: `https://dev.mysql.com/downloads/mysql/`
 
@@ -21,6 +23,8 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 ```
 Once you have updtaed this file you should be able to run the project and have it connected to your MySQL Server
 
+
+### Frontend
 Run the frontend code within the `/client` folder:
 
 ```bash
