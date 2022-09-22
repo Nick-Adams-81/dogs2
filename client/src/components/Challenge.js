@@ -13,21 +13,8 @@ const Challenge = () => {
   const navigate = useNavigate();
 
   return (
-    <>
-      <table>
-        <thead>
-          <tr>
-            <td>SKU</td>
-            <td>Item Name</td>
-            <td>Amount in Stock</td>
-            <td>Capacity</td>
-            <td>Order Amount</td>
-          </tr>
-        </thead>
-        <tbody>
-          
-        </tbody>
-      </table>
+    <div style={{ marginTop: 20 }}>
+   
       
       <Button variant="info" style={{ margin: 2 }} onClick={() => navigate("/")}>Home</Button>
       <Button variant="info" style={{ margin: 2 }} onClick={() => navigate("/low-inventory")}>Get Low-Stock Items</Button>
@@ -43,7 +30,7 @@ const Challenge = () => {
         <Route path="/dentists-hate-us" element={<DentistsHateUs />}/>
         <Route path="/shoppingCart" element={<ShoppingCart />}/>
       </Routes> 
-    </>
+    </div>
 
   );
 }
