@@ -13,21 +13,20 @@ import Col from 'react-bootstrap/Col';
 const CandyCorp = () => {
 
     const [candy, setCandy] = useState([])
-    const [itemName, setItemName] = useState("")
-    const [itemTotalPrice, setItemTotalPrice] = useState(0)
-    const [totalQuantity, setTotalQuantity] = useState(0)
+    // const [itemTotalPrice, setItemTotalPrice] = useState(0)
+    // const [totalQuantity, setTotalQuantity] = useState(0)
 
     useEffect(() => {
         get("http://localhost:4567/getCandyCorpStock", setCandy)
     }, [])
 
-    const handleClick = () => {
-        const cartItems = { itemName, itemTotalPrice, totalQuantity }
-        console.log(cartItems)
-        post("http://localhost:4567/saveShoppingCartItem", cartItems)
+    let totalQuantity = 0
+    let itemTotalPrice = 0
+    const handleClick = ({itemName}) => {
+        console.log(itemName, totalQuantity, itemTotalPrice)
+        post("http://localhost:4567/saveShoppingCartItem", {itemName, totalQuantity, itemTotalPrice})
     }
 
-    console.log(candy)
     const calculateTotalCost = (itemCost, itemAmmount) => (itemCost * itemAmmount).toFixed(2)
 
     return (
@@ -35,6 +34,7 @@ const CandyCorp = () => {
         <div>
             <h1 style={{ marginLeft: 160 }}>Candy Corp</h1>
             {candy.map(item => {
+                
                 return (
                     <Row>
                         <Col sm={12} md={6} lg={3}>
@@ -51,7 +51,7 @@ const CandyCorp = () => {
                                     <Card body>
                                         <div style={{ margin: 5 }}>
                                             <Card.Title>Name: {item.itemName}</Card.Title>
-                                            <Card.Text>Cost: {item.cost}</Card.Text>
+                                            <Card.Text>Cost: {item.cost} </Card.Text>
                                             <InputGroup className="mb-3">
                                                 <InputGroup.Text id="basic-addon1"></InputGroup.Text>
                                                 <Form.Control
@@ -60,18 +60,18 @@ const CandyCorp = () => {
                                                     aria-label="item-ammount"
                                                     aria-describedby="basic-addon1"
                                                     type="number"
-                                                    value={totalQuantity}
-                                                    onChange={(e) => setTotalQuantity(e.target.value)}
-
+                                                    onChange={(e) => totalQuantity = e.target.value}
                                                 />
 
                                             </InputGroup>
                                         </div>
                                         <Button style={{ marginLeft: 45 }}
+                                        
                                             onClick={() => {
+                                                // setItemName(item.itemName)
+                                                itemTotalPrice = calculateTotalCost(totalQuantity, item.cost)
+                                                console.log(itemTotalPrice)
                                                 handleClick(item)
-                                                setItemName(item.itemName)
-                                                setItemTotalPrice(calculateTotalCost(item.cost, totalQuantity))
                                             }}>Save to cart</Button>
                                     </Card>
                                 </Card>

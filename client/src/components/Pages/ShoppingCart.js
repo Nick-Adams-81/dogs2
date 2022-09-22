@@ -50,7 +50,7 @@ const ShoppingCart = () => {
                                     <Card body>
                                         <div style={{ margin: 5 }}>
                                             <Card.Title>Name: {item.itemName}</Card.Title>
-                                            <Card.Text>Cost: {item.totalQuantity}</Card.Text>
+                                            <Card.Text>Quantity: {item.totalQuantity}</Card.Text>
                                             <Card.Text>Total Price: {item.itemTotalPrice}</Card.Text>
                                         </div>
 

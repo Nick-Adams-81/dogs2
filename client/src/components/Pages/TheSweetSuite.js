@@ -11,19 +11,17 @@ import Col from 'react-bootstrap/Col';
 const TheSweetSuite = () => {
 
     const [sweet, setSweet] = useState([])
-    const [itemName, setItemName] = useState("")
-    const [itemTotalPrice, setItemTotalPrice] = useState(0)
-    const [totalQuantity, setTotalQuantity] = useState(0)
-
+    
     useEffect(() => {
         get("http://localhost:4567/getSweetSuiteStock", setSweet)
 
     }, [])
 
-    const handleClick = () => {
-        const cartItems = { itemName, itemTotalPrice, totalQuantity }
-        console.log(cartItems)
-        post("http://localhost:4567/saveShoppingCartItem", cartItems)
+    let totalQuantity = 0
+    let itemTotalPrice = 0
+    const handleClick = ({itemName}) => {
+        console.log(itemName, totalQuantity, itemTotalPrice)
+        post("http://localhost:4567/saveShoppingCartItem", {itemName, totalQuantity, itemTotalPrice})
     }
 
     const calculateTotalCost = (itemCost, itemAmmount) => (itemCost * itemAmmount).toFixed(2)
@@ -56,8 +54,7 @@ const TheSweetSuite = () => {
                                                     aria-label="item-ammount"
                                                     aria-describedby="basic-addon1"
                                                     type="number"
-                                                    value={totalQuantity}
-                                                    onChange={(e) => setTotalQuantity(e.target.value)}
+                                                    onChange={(e) => totalQuantity = e.target.value}
 
                                                 />
 
@@ -65,9 +62,8 @@ const TheSweetSuite = () => {
                                         </div>
                                         <Button style={{ marginLeft: 45 }}
                                             onClick={() => {
+                                                itemTotalPrice = calculateTotalCost(totalQuantity, item.cost)
                                                 handleClick(item)
-                                                setItemName(item.itemName)
-                                                setItemTotalPrice(calculateTotalCost(item.cost, totalQuantity))
                                             }}>Save to cart</Button>
                                     </Card>
                                 </Card>
