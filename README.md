@@ -58,12 +58,11 @@ I really wanted to have time to write tests, I would utilize JUnit for the Java 
 #### Put mapping
 Something that fell through the craks for me was put mapping, I would like to have made the home page inventory update every time you bought something at one of the stores, but again time wasn't on my side for this project.
 
+There's other things that I would like to have gotten done but the things that I already mentioned are the major ones. 
 
+## Conclusion
+I'd like to say this was a lot of fun, I really enjoy the challenge! I hope I didn't go to overboard and take too much creative license. I know this isn't exactly how the challenge was supposed to be built, but I wanted to really showcase what i'm capable of, I thank you for allowing me this opportunity! 
 
+Thank you!!!
 
-
-
-
-
-
-
+* Created by: Nick Adams
