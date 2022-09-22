@@ -8,7 +8,7 @@
 
 ### Backend
 How to run the code in the `/JavaServer` folder
-
+Open the `/server` folder as a Maven project within a Java IDE and run the project. I suggest using IntelliJ IDEA.
 * If you don't have MySQL Server installed you can follow the instructions for installation at: `https://dev.mysql.com/downloads/mysql/`
 
 * After you have MySQL Server installed, and have created a username and password, you can connect MySQL Server to the project by modifying the example.properties file at: `src/main/resources/example.properties`
@@ -40,6 +40,6 @@ npm run start
 
 After running previous commands, you should see the website at `http://localhost:3000`.
 
-Open the `/server` folder as a Maven project within a Java IDE and run the project. I suggest using IntelliJ IDEA.
+
 
 
