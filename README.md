@@ -1,7 +1,3 @@
-# Randy's Candys 
-Welcome to Randy's Candys! We have a wide variety of all sorts of sweet things for every kind of sweet tooth,
-here at Randy's Candies we keep dentists on business, so if you have a sweet tooth we have the candies for you!
-
 
 ## System Requirements
 - Latest LTS version of Node
@@ -29,8 +25,11 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 ```
 Once you have updtaed this file you should be able to run the project at: `http://localhost:4567`.
-* Note about port: 
-You can change the port the project runs on in the application.properties file at server.port
+#### Note about port: 
+* You can change the port the project runs on in the application.properties file at server.port
+#### Note about the data.sql file:
+* When you initially run the backend the app will auto populate the db with data from the data.sql file, once you stop the app, if you restart the backend the app will once again auto populate the db with the same data, you will get duplicate data
+
 
 
 ### Frontend
