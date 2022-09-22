@@ -1,5 +1,4 @@
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup'
 import Form from 'react-bootstrap/Form';
 
@@ -9,7 +8,7 @@ const DistributorCard = (props) => {
             width: '12rem',
             border: '1px solid black',
             margin: 3,
-            display: 'inline-block',
+            display: 'flex',
             backgroundColor: '#FFF0FC',
             color: '#5D104D'
         }}>

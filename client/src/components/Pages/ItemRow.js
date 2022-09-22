@@ -14,7 +14,7 @@ const ItemRow = () => {
     }, [])
 
     return (
-        <div>
+        <div style={{ display: 'inline-block' }}>
 
             <h1 style={{ marginLeft: 140 }}>Randy's Candies</h1>
             {inventory.map((item) => {
