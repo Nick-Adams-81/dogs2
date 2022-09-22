@@ -26,7 +26,6 @@ const TheSweetSuite = () => {
         post("http://localhost:4567/saveShoppingCartItem", cartItems)
     }
 
-    console.log(sweet)
     const calculateTotalCost = (itemCost, itemAmmount) => (itemCost * itemAmmount).toFixed(2)
 
     return (
