@@ -46,6 +46,21 @@ npm run start
 
 After running previous commands, you should see the website at `http://localhost:3000`.
 
+### Future Development
+There's still things I would like to have got done on this, given that I had one week to accomplish this I feel good about where this project is, still there's a few things I would like to do, here's a list of some of them...
+
+#### Styling
+I would like to have had the time to make this app look amazing to a real life end user, one approach I would have taken is utilizing a framework like react bootstrap or material UI, especially for their grid systems, if I had another few days I could have made this app responsive.
+
+#### Unit Tests
+I really wanted to have time to write tests, I would utilize JUnit for the Java stuff, and Jest for the JavaScript/React stuff, this is somethig i'm still interested in doing but currently don't have the time.
+
+#### Put mapping
+Something that fell through the craks for me was put mapping, I would like to have made the home page inventory update every time you bought something at one of the stores, but again time wasn't on my side for this project.
+
+
+
+
 
 
 
