@@ -6,6 +6,7 @@ import TheSweetSuite from "./Pages/TheSweetSuite"
 import DentistsHateUs from "./Pages/DentistsHateUs"
 import { Routes, Route, useNavigate } from "react-router-dom"
 import ShoppingCart from "./Pages/ShoppingCart"
+import Button from 'react-bootstrap/Button'
 
 const Challenge = () => {
 
@@ -28,14 +29,12 @@ const Challenge = () => {
         </tbody>
       </table>
       
-      <div>Total Cost: </div>
-    
-      <button onClick={() => navigate("/")}>Home</button>
-      <button onClick={() => navigate("/low-inventory")}>Get Low-Stock Items</button>
-      <button onClick={() => navigate("/candy-corp")}>Candy Corp</button>
-      <button onClick={() => navigate("/theSweetSuite")}>the sweet suite</button>
-      <button onClick={() => navigate("dentists-hate-us")}>Dentists Hate Us</button>
-      <button onClick={() => navigate("shoppingCart")}>Shopping Cart</button>
+      <Button variant="info" style={{ margin: 2 }} onClick={() => navigate("/")}>Home</Button>
+      <Button variant="info" style={{ margin: 2 }} onClick={() => navigate("/low-inventory")}>Get Low-Stock Items</Button>
+      <Button variant="info" style={{ margin: 2 }} onClick={() => navigate("/candy-corp")}>Candy Corp</Button>
+      <Button variant="info" style={{ margin: 2 }} onClick={() => navigate("/theSweetSuite")}>the sweet suite</Button>
+      <Button variant="info" style={{ margin: 2 }} onClick={() => navigate("dentists-hate-us")}>Dentists Hate Us</Button>
+      <Button variant="info" style={{ margin: 2 }} onClick={() => navigate("shoppingCart")}>Shopping Cart</Button>
       <Routes>
         <Route path="/" element={<ItemRow />}/>
         <Route path="/low-inventory" element={<LowInventory />}/>

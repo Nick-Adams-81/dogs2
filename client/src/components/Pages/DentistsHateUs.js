@@ -19,34 +19,35 @@ const DentistsHateUs = () => {
 
     let totalQuantity = 0
     let itemTotalPrice = 0
-    const handleClick = ({itemName}) => {
+    const handleClick = ({ itemName }) => {
         console.log(itemName, totalQuantity, itemTotalPrice)
-        post("http://localhost:4567/saveShoppingCartItem", {itemName, totalQuantity, itemTotalPrice})
+        post("http://localhost:4567/saveShoppingCartItem", { itemName, totalQuantity, itemTotalPrice })
     }
-    
+
     const calculateTotalCost = (itemCost, itemAmmount) => (itemCost * itemAmmount).toFixed(2)
 
 
-    return(
+    return (
         <>
-        <h1>Dentists Hate Us</h1>
-        {dentist.map(item => {
-            return(
-                <Row style={{ display: 'flex' }}>
+            <h1>Dentists Hate Us</h1>
+            {dentist.map(item => {
+                return (
+                    <Row style={{ display: 'flex' }}>
                         <Col sm="12" md="6" lg="3">
                             <div key={item.id}>
-                            <Card style={{
-                                    width: '12rem',
+                                <Card style={{
+                                    width: '15rem',
                                     border: '1px solid black',
                                     margin: 3,
                                     display: 'inline-block',
                                     backgroundColor: '#FFF0FC',
-                                    color: '#5D104D'
+                                    color: '#5D104D',
+                                    boxShadow: '4px 4px'
                                 }}>
                                     <Card body>
                                         <div style={{ margin: 5 }}>
-                                            <Card.Title>Name: {item.itemName}</Card.Title>
-                                            <Card.Text>Cost: {item.cost}</Card.Text>
+                                            <Card.Title style={{ fontSize: 28 }}>Name: {item.itemName}</Card.Title>
+                                            <Card.Text style={{ fontSize: 22}}>Cost: {item.cost}</Card.Text>
                                             <InputGroup className="mb-3">
                                                 <InputGroup.Text id="basic-addon1"></InputGroup.Text>
                                                 <Form.Control
@@ -68,12 +69,12 @@ const DentistsHateUs = () => {
                                             }}>Save to cart</Button>
                                     </Card>
                                 </Card>
-                                
+
                             </div>
                         </Col>
                     </Row>
-            )
-        })}
+                )
+            })}
         </>
     )
 }
