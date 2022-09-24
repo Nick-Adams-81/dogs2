@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react"
 import getItems from "../CustomHooks/GET"
 import Card from "../InventoryCard"
 
-
-
 const ItemRow = () => {
 
     const [inventory, setInventory] = useState([])
@@ -15,7 +13,6 @@ const ItemRow = () => {
 
     return (
         <div style={{ display: 'inline-block' }}>
-
             <h1 style={{ marginLeft: 140 }}>Randy's Candies</h1>
             {inventory.map((item) => {
                 return (
@@ -24,11 +21,7 @@ const ItemRow = () => {
                     </div>
                 )
             })}
-
         </div>
-
-
     )
 }
-
 export default ItemRow

@@ -18,7 +18,6 @@ const ItemCard = (props) => {
                     <Card.Text style={{ fontSize: 22 }}>Stock: {props.stock}</Card.Text>
                     <Card.Text style={{ fontSize: 22 }}>Capacity: {props.capacity}</Card.Text>
                 </div>
-
             </Card>
         </Card>
     );

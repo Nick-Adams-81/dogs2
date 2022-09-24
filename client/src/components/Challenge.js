@@ -13,9 +13,7 @@ const Challenge = () => {
   const navigate = useNavigate();
 
   return (
-    <div style={{ marginTop: 20 }}>
-   
-      
+    <div style={{ marginTop: 20 }}>   
       <Button variant="info" style={{ margin: 2 }} onClick={() => navigate("/")}>Home</Button>
       <Button variant="info" style={{ margin: 2 }} onClick={() => navigate("/low-inventory")}>Get Low-Stock Items</Button>
       <Button variant="info" style={{ margin: 2 }} onClick={() => navigate("/candy-corp")}>Candy Corp</Button>

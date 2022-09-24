@@ -25,8 +25,6 @@ const DistributorCard = (props) => {
                         />
                         {props.total}
                     </InputGroup>
-                    {/* <Card.Text>Capacity: {props.capacity}</Card.Text> */}
-                    
                 </div>
 
             </Card>

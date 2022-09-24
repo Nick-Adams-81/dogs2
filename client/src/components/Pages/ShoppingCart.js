@@ -11,23 +11,19 @@ const ShoppingCart = () => {
     const [data, setData] = useState([])
 
     let value = []
-    for (let i = 0; i < data.length; i++) {
-        value.push(data[i].itemTotalPrice)
-    }
-
-    console.log(value)
+    data.forEach(item => value.push(item.itemTotalPrice))
 
     let grandTotal = value.reduce((item, total) => item + total, 0).toFixed(2)
-    console.log(grandTotal)
 
     useEffect(() => {
         get("http://localhost:4567/getAllShoppingCartItems", setData)
     }, [])
+
     return (
         <>
             <h1>Your Cart</h1>
             <h2>Grand Total: ${grandTotal}</h2>
-            <Button variant ="success" style={{ marginLeft: 45 }}
+            <Button variant="success" style={{ marginLeft: 45 }}
                 onClick={() => {
                     alert(`Order Complete! Your total is: $${grandTotal}`)
                     deleteItem("http://localhost:4567/deleteAllCartItems")
@@ -54,18 +50,14 @@ const ShoppingCart = () => {
                                             <Card.Text style={{ fontSize: 22 }}>Quantity: {item.totalQuantity}</Card.Text>
                                             <Card.Text style={{ fontSize: 22 }}>Total Price: {item.itemTotalPrice}</Card.Text>
                                         </div>
-
                                     </Card>
                                 </Card>
-
                             </div>
                         </Col>
                     </Row>
                 )
             })}
-
         </>
-
     )
 }
 export default ShoppingCart

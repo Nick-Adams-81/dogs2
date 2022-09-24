@@ -56,27 +56,23 @@ const TheSweetSuite = () => {
                                                     aria-describedby="basic-addon1"
                                                     type="number"
                                                     onChange={(e) => totalQuantity = e.target.value}
-
                                                 />
-
                                             </InputGroup>
                                         </div>
                                         <Button style={{ marginLeft: 45 }}
                                             onClick={() => {
                                                 itemTotalPrice = calculateTotalCost(totalQuantity, item.cost)
+                                                alert(`You added ${totalQuantity} ${item.itemName} to your cart! Total: $${calculateTotalCost(totalQuantity, item.cost)}`)
                                                 handleClick(item)
                                             }}>Save to cart</Button>
                                     </Card>
                                 </Card>
-                                
                             </div>
                         </Col>
                     </Row>
-
                 )
             })}
         </div>
-
     )
 }
 export default TheSweetSuite

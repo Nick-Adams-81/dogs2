@@ -12,7 +12,6 @@ const ItemRow = () => {
         getItem("http://localhost:4567/getItems", setInventory)
     }, [])
 
-  
     const filteredArray = inventory.filter(item => {
         return (item.capacity / item.stock) >= 4
     })
@@ -22,7 +21,6 @@ const ItemRow = () => {
             <h1 style={{ marginLeft: 140 }}>Low Stock Items</h1>
             {filteredArray.map(item => {
                 return (
-                    
                     <div key={item.id}>
                         <Card name={item.productName} stock={item.stock}  capacity={item.capacity}/>
                     </div>

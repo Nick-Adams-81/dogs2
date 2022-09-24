@@ -29,11 +29,9 @@ const CandyCorp = () => {
     const calculateTotalCost = (itemCost, itemAmmount) => (itemCost * itemAmmount).toFixed(2)
 
     return (
-
         <div>
             <h1 style={{ marginLeft: 160 }}>Candy Corp</h1>
             {candy.map(item => {
-
                 return (
                     <Row>
                         <Col sm={12} md={6} lg={3}>
@@ -62,7 +60,6 @@ const CandyCorp = () => {
                                                     type="number"
                                                     onChange={(e) => totalQuantity = e.target.value}
                                                 />
-
                                             </InputGroup>
                                         </div>
                                         <Button
@@ -70,24 +67,16 @@ const CandyCorp = () => {
                                             style={{ marginLeft: 45 }}
                                             onClick={() => {
                                                 itemTotalPrice = calculateTotalCost(totalQuantity, item.cost)
-                                                console.log(itemTotalPrice)
+                                                alert(`You added ${totalQuantity} ${item.itemName} to your cart Total: $${calculateTotalCost(totalQuantity, item.cost)}`)
                                                 handleClick(item)
                                             }}>Save to cart</Button>
                                     </Card>
                                 </Card>
-
                             </div>
                         </Col>
                     </Row>
-
-
-
-
                 )
-
             })}
-
-
         </div>
     )
 }

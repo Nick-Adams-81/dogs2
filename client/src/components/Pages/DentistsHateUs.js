@@ -26,7 +26,6 @@ const DentistsHateUs = () => {
 
     const calculateTotalCost = (itemCost, itemAmmount) => (itemCost * itemAmmount).toFixed(2)
 
-
     return (
         <>
             <h1>Dentists Hate Us</h1>
@@ -57,9 +56,7 @@ const DentistsHateUs = () => {
                                                     aria-describedby="basic-addon1"
                                                     type="number"
                                                     onChange={(e) => totalQuantity = e.target.value}
-
                                                 />
-
                                             </InputGroup>
                                         </div>
                                         <Button style={{ marginLeft: 45 }}
@@ -69,7 +66,6 @@ const DentistsHateUs = () => {
                                             }}>Save to cart</Button>
                                     </Card>
                                 </Card>
-
                             </div>
                         </Col>
                     </Row>
