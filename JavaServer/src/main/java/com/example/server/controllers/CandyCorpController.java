@@ -22,6 +22,7 @@ public class CandyCorpController {
         return candyCorpService.getAllCandyCorp();
     }
 
+
     @GetMapping("/getCandyCorpStock/{id}")
     @ResponseBody
     public Optional<CandyCorp> getOneCandyCorpItem(@PathVariable long id) {

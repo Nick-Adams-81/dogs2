@@ -33,7 +33,7 @@ const DentistsHateUs = () => {
                 return (
                     <Row style={{ display: 'flex' }}>
                         <Col sm="12" md="6" lg="3">
-                            <div key={item.id}>
+                            <div>
                                 <Card style={{
                                     width: '15rem',
                                     border: '1px solid black',
@@ -44,7 +44,7 @@ const DentistsHateUs = () => {
                                     boxShadow: '4px 4px'
                                 }}>
                                     <Card body>
-                                        <div style={{ margin: 5 }}>
+                                        <div style={{ margin: 5 }} key={item.id}>
                                             <Card.Title style={{ fontSize: 28 }}>Name: {item.itemName}</Card.Title>
                                             <Card.Text style={{ fontSize: 22}}>Cost: {item.cost}</Card.Text>
                                             <InputGroup className="mb-3">
@@ -62,6 +62,7 @@ const DentistsHateUs = () => {
                                         <Button style={{ marginLeft: 45 }}
                                             onClick={() => {
                                                 itemTotalPrice = calculateTotalCost(item.cost, totalQuantity)
+                                                alert(`You added ${totalQuantity} ${item.itemName} to your cart Total: $${calculateTotalCost(totalQuantity, item.cost)}`)
                                                 handleClick(item)
                                             }}>Save to cart</Button>
                                     </Card>
