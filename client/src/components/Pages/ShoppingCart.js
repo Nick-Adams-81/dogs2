@@ -17,14 +17,6 @@ const ShoppingCart = () => {
 
     let grandTotal = value.reduce((item, total) => item + total, 0).toFixed(2)
 
-    // const handleDeleteOne = (id) => {
-    //     fetch(`http://localhost:4567/deleteOneCartItem/${id}`, {
-    //         method: "DELETE"
-    //     })
-    //         .then(() => console.log("success"))
-    //         .catch(err => console.log(err))
-    // }
-
     useEffect(() => {
         get("http://localhost:4567/getAllShoppingCartItems", setData)
     }, [])
