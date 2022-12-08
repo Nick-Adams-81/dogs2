@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import get from "../CustomHooks/GET";
 import post from "../CustomHooks/POST";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -12,7 +12,9 @@ import Col from "react-bootstrap/Col";
 const CandyCorp = () => {
   const [candy, setCandy] = useState([]);
 
-  get("http://localhost:4567/getCandyCorpStock", setCandy);
+  useEffect(() => {
+    get("http://localhost:4567/getCandyCorpStock", setCandy);
+  }, []);
 
   let totalQuantity = 0;
   let itemTotalPrice = 0;
